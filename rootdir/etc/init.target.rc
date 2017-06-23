@@ -49,7 +49,6 @@ on init
 
 on fs
     mount_all /vendor/etc/fstab.qcom
-    swapon_all /vendor/etc/fstab.qcom
 
     restorecon_recursive /mnt/vendor/persist
     mkdir /mnt/vendor/persist/alarm 0770 system system
