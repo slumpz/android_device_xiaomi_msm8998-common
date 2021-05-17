@@ -1,0 +1,2 @@
+# Alarm
+allow system_app hal_alarm_qti_hwservice:hwservice_manager { find };
