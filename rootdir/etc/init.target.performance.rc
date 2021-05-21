@@ -50,6 +50,10 @@ on init
     # Enable thermal
     write /sys/module/msm_thermal/core_control/enabled 1
 
+    # Set minfreq for cpu-boost on input
+    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1171200 1:1171200 2:1171200 3:1171200 4:1132800 5:1132800 6:1132800 7:1132800"
+    write /sys/module/cpu_boost/parameters/input_boost_ms 1400
+
     # Disable retention
     write /sys/module/lpm_levels/system/perf/cpu4/ret/idle_enabled N
     write /sys/module/lpm_levels/system/perf/cpu5/ret/idle_enabled N
