@@ -47,6 +47,9 @@ on init
     write /dev/stune/top-app/schedtune.boost 10
     write /dev/stune/top-app/schedtune.prefer_idle 1
 
+    # Enable thermal
+    write /sys/module/msm_thermal/core_control/enabled 1
+
     # Disable retention
     write /sys/module/lpm_levels/system/perf/cpu4/ret/idle_enabled N
     write /sys/module/lpm_levels/system/perf/cpu5/ret/idle_enabled N
